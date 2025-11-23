@@ -2,12 +2,15 @@ import Head from 'next/head';
 import React, { useEffect, useState } from 'react';
 // import TopWarningBanner from '../components/TopWarningBanner';
 import Footer from '../components/Footer';
+import { useFormSubmission } from '../hooks/useFormSubmission';
 
 export default function Home() {
   const [showPrivacy, setShowPrivacy] = useState(false);
   const [showAgreement, setShowAgreement] = useState(false);
   // 1. ДОБАВЛЕНО: Новое состояние для Cookie Policy
   const [showCookies, setShowCookies] = useState(false);
+
+  const { handleSubmit, isLoading } = useFormSubmission();
 
   const backgroundImagePath = '/images/background.jpg';
   const backgroundOpacity = 0.3;
@@ -28,36 +31,6 @@ export default function Home() {
       if (signUpButton) signUpButton.removeEventListener('click', handleScrollToForm);
     };
   }, []);
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    const form = e.currentTarget;
-    const formData = new FormData(form);
-
-    const payload = {
-      firstName: formData.get('firstName')?.toString() || '',
-      lastName: formData.get('lastName')?.toString() || '',
-      email: formData.get('email')?.toString() || '',
-      phone: formData.get('phone')?.toString() || '',
-    };
-
-    console.log('Submitting form:', payload);
-
-    try {
-      const res = await fetch('/api/signup', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(payload),
-      });
-
-      if (!res.ok) throw new Error(`HTTP ${res.status}`);
-      alert('Registration successful! Our manager will contact you shortly.');
-      form.reset();
-    } catch (err) {
-      console.error('Submit error:', err);
-      alert('Error sending form — check console.');
-    }
-  };
 
   return (
     <div className="min-h-screen bg-teal-900 text-white relative">
@@ -184,20 +157,24 @@ export default function Home() {
                 className="w-full p-2 border border-gray-300 rounded"
               />
             </div>
-            <div className="mb-3">
+            <div className="mb-3 flex">
+              <span className="bg-gray-100 text-teal-900 p-2 border border-gray-300 border-r-0 rounded-l-md flex items-center font-bold">
+                +60
+              </span>
               <input
                 type="tel"
                 name="phone"
                 placeholder="Phone"
                 required
-                className="w-full p-2 border border-gray-300 rounded"
+                className="w-full p-2 border border-gray-300 rounded-r-md"
               />
             </div>
             <button
               type="submit"
+              disabled={isLoading}
               className="w-full bg-green-500 text-white py-2 rounded hover:bg-green-600 transition"
             >
-              Join Now
+              {isLoading ? 'Joining...' : 'Join Now'}
             </button>
           </form>
         </div>
@@ -410,20 +387,24 @@ export default function Home() {
               className="w-full p-2 bg-teal-700 text-white border border-teal-600 rounded"
             />
           </div>
-          <div className="mb-4">
+          <div className="mb-4 flex">
+            <span className="bg-teal-700 text-white p-2 border border-teal-600 border-r-0 rounded-l-md flex items-center font-bold">
+              +60
+            </span>
             <input
               type="tel"
               name="phone"
               placeholder="Phone"
               required
-              className="w-full p-2 bg-teal-700 text-white border border-teal-600 rounded"
+              className="w-full p-2 bg-teal-700 text-white border border-teal-600 rounded-r-md"
             />
           </div>
           <button
             type="submit"
+            disabled={isLoading}
             className="w-full bg-yellow-400 text-teal-900 font-bold py-2 rounded hover:bg-yellow-500 transition"
           >
-            Join Now
+            {isLoading ? 'Joining...' : 'Join Now'}
           </button>
         </form>
       </section>
