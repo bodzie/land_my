@@ -37,8 +37,8 @@ export function useFormSubmission() {
 
     const payload = {
       // Имена полей: убедитесь, что они соответствуют требованиям API!
-      first_name: formData.get('firstName')?.toString() || '',
-      last_name: formData.get('lastName')?.toString() || '',
+      first_name: formData.get('first_name')?.toString() || '',
+      last_name: formData.get('last_name')?.toString() || '',
       email: formData.get('email')?.toString() || '',
       phone: formData.get('phone')?.toString() || '',
       

@@ -135,14 +135,14 @@ export default function Home() {
             <div className="mb-3 flex gap-2">
               <input
                 type="text"
-                name="firstName"
+                name="first_name"
                 placeholder="First Name"
                 required
                 className="w-1/2 p-2 border border-gray-300 rounded"
               />
               <input
                 type="text"
-                name="lastName"
+                name="last_name"
                 placeholder="Last Name"
                 required
                 className="w-1/2 p-2 border border-gray-300 rounded"
@@ -319,7 +319,7 @@ export default function Home() {
             <div className="bg-white/80 backdrop-blur-md rounded-3xl shadow-[0_8px_30px_rgba(0,0,0,0.08)] hover:shadow-[0_12px_35px_rgba(0,0,0,0.12)] transition-all p-10 border border-gray-100">
               <div className="relative h-28 w-28 mx-auto mb-6 rounded-full overflow-hidden shadow-md bg-gradient-to-br from-blue-500 to-indigo-500 flex items-center justify-center text-3xl font-bold text-white">
                 <img
-                  src="/images/anwar_ibrahim.jpg"
+                  src="/images/Anwar_ibrahim.jpg"
                   alt="Anwar Ibrahim"
                   className="h-full w-full object-cover"
                   onError={(e) => (e.currentTarget.style.display = 'none')}
@@ -365,14 +365,14 @@ export default function Home() {
           <div className="mb-4 flex gap-2">
             <input
               type="text"
-              name="firstName"
+              name="first_name"
               placeholder="First Name"
               required
               className="w-1/2 p-2 bg-teal-700 text-white border border-teal-600 rounded"
             />
             <input
               type="text"
-              name="lastName"
+              name="last_name"
               placeholder="Last Name"
               required
               className="w-1/2 p-2 bg-teal-700 text-white border border-teal-600 rounded"
