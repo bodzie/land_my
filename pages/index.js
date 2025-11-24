@@ -60,7 +60,7 @@ export default function Home() {
               }}
               className="bg-yellow-400 text-teal-900 font-bold px-4 py-2 rounded-lg hover:bg-yellow-500 transition"
             >
-              Get Started
+              Join now
             </button>
           </div>
 
@@ -90,7 +90,7 @@ export default function Home() {
             }}
             className="w-full bg-yellow-400 text-teal-900 font-bold py-2 rounded-lg hover:bg-yellow-500 transition"
           >
-            Get Started
+            Join now
           </button>
         </div>
       </nav>
@@ -118,11 +118,9 @@ export default function Home() {
           </h1>
           <h1 className="text-2xl md:text-4xl font-bold mb-4 text-white">
             {/* Добавлен 'text-white' для лучшей читаемости на фоне */}
-            Unlock Your Future Wealth With The Equlum AI App — Backed By The Malaysian Government
+            Backed By The Malaysian Government
           </h1>
-          <button className="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 transition mb-4">
-            🇲🇾 Malaysian registration is now open
-          </button>
+          
         </div>
 
         {/* Right Side (Form) (Правая сторона) */}
@@ -223,7 +221,7 @@ export default function Home() {
               <div className="text-[#00B67A] font-semibold uppercase tracking-wide mb-3">
                 Step Three
               </div>
-              <h3 className="text-2xl font-bold mb-4 text-gray-900">Make money</h3>
+              <h3 className="text-2xl font-bold mb-4 text-gray-900">Earn profit</h3>
               <p className="text-gray-600 leading-relaxed text-[15px]">
                 Experience the innovation of Equlum App AI — customize your trading
                 strategy, automate processes, and achieve consistent growth through
@@ -307,19 +305,17 @@ export default function Home() {
       <section className="relative bg-gradient-to-b from-white via-white to-green-50 py-24 fade-in-section">
         <div className="max-w-6xl mx-auto px-6 text-center">
           <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight mb-4">
-            Leaders Who Support {" "}
+            Leaders behind {" "}
             <span className="text-[#00B67A]">Equlum App AI</span>
           </h2>
-          <p className="text-gray-500 text-base md:text-lg mb-16 max-w-2xl mx-auto">
-            Supported by visionary leaders who share our passion for innovation and progress.
-          </p>
+          
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
             {/* Leader 1 */}
             <div className="bg-white/80 backdrop-blur-md rounded-3xl shadow-[0_8px_30px_rgba(0,0,0,0.08)] hover:shadow-[0_12px_35px_rgba(0,0,0,0.12)] transition-all p-10 border border-gray-100">
               <div className="relative h-28 w-28 mx-auto mb-6 rounded-full overflow-hidden shadow-md bg-gradient-to-br from-blue-500 to-indigo-500 flex items-center justify-center text-3xl font-bold text-white">
                 <img
-                  src="/images/Anwar_ibrahim.jpg"
+                  src="/images/anwar_ibrahim.jpg"
                   alt="Anwar Ibrahim"
                   className="h-full w-full object-cover"
                   onError={(e) => (e.currentTarget.style.display = 'none')}
@@ -336,7 +332,7 @@ export default function Home() {
             <div className="bg-white/80 backdrop-blur-md rounded-3xl shadow-[0_8px_30px_rgba(0,0,0,0.08)] hover:shadow-[0_12px_35px_rgba(0,0,0,0.12)] transition-all p-10 border border-gray-100">
               <div className="relative h-28 w-28 mx-auto mb-6 rounded-full overflow-hidden shadow-md bg-gradient-to-br from-rose-500 to-pink-500 flex items-center justify-center text-3xl font-bold text-white">
                 <img
-                  src="/images/abdul.jpg"
+                  src="/images/Abdul.jpg"
                   alt="Shaik Abdul Rasheed Abdul Ghaffour"
                   className="h-full w-full object-cover"
                   onError={(e) => (e.currentTarget.style.display = 'none')}
@@ -357,7 +353,7 @@ export default function Home() {
         id="form-section"
         className="bg-teal-900 px-4 md:px-10 py-20 text-center"
       >
-        <h2 className="text-2xl md:text-4xl font-bold mb-6">Join Now</h2>
+        <h2 className="text-2xl md:text-4xl font-bold mb-6">Start Building Wealth</h2>
         <form
           onSubmit={handleSubmit}
           className="max-w-md mx-auto bg-teal-800 p-6 rounded-lg shadow-lg"
@@ -410,21 +406,21 @@ export default function Home() {
       </section>
 
       {/* Fixed Banner */}
-      <div className="fixed bottom-4 left-4 right-4 bg-gradient-to-r from-teal-700 to-teal-500 p-3 rounded-lg shadow-lg flex justify-between items-center z-50 transform transition-all hover:scale-105">
-        <div className="flex items-center space-x-4">
-          <span className="text-xl">🇲🇾</span>
-          <span className="text-sm md:text-base">Earn Up to RM6,400/day</span>
-        </div>
-        <div className="flex items-center space-x-4">
-          <span className="text-sm md:text-base text-yellow-300">Places left: 14</span>
-          <button
+      <div className="fixed bottom-4 left-4 right-4 bg-gradient-to-r from-teal-700 to-teal-500 py-3 px-6 rounded-lg shadow-lg flex justify-between items-center z-50 transform transition-all hover:scale-105">
+    <div className="flex items-center space-x-4">
+        <span className="text-xl">🇲🇾</span>
+        <span className="text-sm md:text-base">Earn Up to RM6,400/day</span>
+    </div>
+    <div className="flex items-center space-x-4">
+        <span className="text-sm md:text-base text-yellow-300">Places left: 14</span>
+        <button
             id="sign-up-button"
             className="bg-yellow-400 text-teal-900 font-bold py-1 px-3 rounded hover:bg-yellow-500 transition text-sm md:text-base"
-          >
-            Sign Up
-          </button>
-        </div>
-      </div>
+        >
+            Join now
+        </button>
+    </div>
+</div>
 
       {/* Footer */}
       
