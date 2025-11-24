@@ -44,7 +44,7 @@ export function useFormSubmission() {
       
       // Поля для отслеживания и гео
       aff_sub5: aff_sub5 || '', 
-      aff_id: '762',
+      affid: '762',
       area_code: '+60',
       aff_sub3: 'en',
       language: 'en',
