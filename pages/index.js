@@ -35,26 +35,39 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-teal-900 text-white relative">
       <Head>
-        <title>EquLum App AI - Malaysia</title>
-        <meta name="description" content="Investment trading platform Malaysia" />
-          <script async src="https://www.googletagmanager.com/gtag/js?id=G-C14YYN5ZGK"></script>
-        <script>
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
+  <title>EquLum App AI - Malaysia</title>
+  <meta name="description" content="Investment trading platform Malaysia" />
+  
+  {/* 1. Загрузка основного скрипта Google Tag Manager */}
+  <script
+    key="ga-script"
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-C14YYN5ZGK" 
+  />
+  
+  {/* 2. Инициализация dataLayer, gtag и конфигурация с Linker */}
+  <script
+    key="ga-config"
+    dangerouslySetInnerHTML={{
+      __html: `
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
 
-          gtag('config', 'G-C14YYN5ZGK', {
-            'linker': {
-              'domains': [
-                'equlum.online',
-                'myasean.online/1SnWMDWC',
-                'myasean.online',
-                'asean-media.online'
-              ]
-            }
-          });
-        </script>
-      </Head>
+        gtag('config', 'G-C14YYN5ZGK', {
+          page_path: window.location.pathname,
+          'linker': {
+            'domains': [
+              'equlum.online',
+              'myasean.online',
+              'asean-media.online'
+            ]
+          }
+        });
+      `,
+    }}
+  />
+</Head>
 
 
 
