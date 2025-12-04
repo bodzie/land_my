@@ -37,7 +37,6 @@ export default function Home() {
       <Head>
         <title>EquLum App AI - Malaysia</title>
         <meta name="description" content="Investment trading platform Malaysia" />
-        <!-- Google tag (gtag.js) -->
           <script async src="https://www.googletagmanager.com/gtag/js?id=G-C14YYN5ZGK"></script>
         <script>
           window.dataLayer = window.dataLayer || [];
